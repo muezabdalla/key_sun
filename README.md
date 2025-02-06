@@ -1,6 +1,6 @@
 # key_sun
 
-![preview when clicked](./screenshots/clicked.png "image")
+![preview when clicked](./screenshots/example.png "image")
 
 this is the image when you click the right button.
 
