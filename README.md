@@ -59,4 +59,5 @@ for example if you want to check `/dev/input/event2` then run `cat /dev/input/ev
 mouse_sun a mouse monitoring software 
 
 ## similar projects:
-key-mon
+[key-mon](https://github.com/scottkirkwood/key-mon)
+[KmCaster](https://github.com/johantiden/KmCaster)
