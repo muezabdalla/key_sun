@@ -56,7 +56,7 @@ for example if you want to check `/dev/input/event2` then run `cat /dev/input/ev
 - if when you use `cat /dev/input/event0` you get authentication failed or something like that. then you have two options. first: run the program as root (not recommended) second: add yourself to the input group
 
 ## other project:
-key_sun a keyboard monitoring software 
+mouse_sun a mouse monitoring software 
 
 ## similar projects:
 key-mon
