@@ -16,8 +16,8 @@ first install the following dependancies on your system
 
 - SDL2-devel
 - SDL2_image-devel
-- gcc
-- make
+- gcc (only for compilation)
+- make (only for compilation)
 
 for void linux:
 
