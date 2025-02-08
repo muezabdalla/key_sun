@@ -10,7 +10,35 @@ this is a software to show the keyboard clicks on screen. it is useful when maki
 [comment]: # (<img src="./screenshots/mouse.png" height="100" align="left"/>)
 
 ## how to install
-first install the following dependancies on your system
+first download the tar file from the [releases](https://github.com/muezabdalla/key_sun/releases)
+note: download the key-sun.tar not the source code(the source code is for building from source)
+
+then extract the tar file with this command:
+
+```
+tar -xf key-sun.tar
+```
+
+then move inside the new folder
+
+```
+cd key-sun*
+```
+
+then install the dependancies
+
+### dependancies:
+
+- SDL2
+- SDL2_image
+
+then to run it:
+
+```
+./key_sun
+```
+
+## building from source
 
 ### dependancies:
 
@@ -59,5 +87,5 @@ for example if you want to check `/dev/input/event2` then run `cat /dev/input/ev
 mouse_sun a mouse monitoring software 
 
 ## similar projects:
-[key-mon](https://github.com/scottkirkwood/key-mon)
-[KmCaster](https://github.com/johantiden/KmCaster)
+- [key-mon](https://github.com/scottkirkwood/key-mon)
+- [KmCaster](https://github.com/johantiden/KmCaster)
