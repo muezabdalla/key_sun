@@ -3,19 +3,21 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <iostream>
+#include <filesystem> // to check if the input file exist
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <string>
 
-#define KEYBOARD_FILE "/dev/input/event0"
+char KEYBOARD_FILE[22] = "/dev/input/event0";
 
-#define BUTTON_WIDTH	100
-#define BUTTON_HIEGHT	60
+int BUTTON_WIDTH =	100;
+int BUTTON_HIEGHT =	60;
 
-#define SHOW_CTRL	true
-#define SHOW_SHIFT	true
-#define SHOW_SUPER	true
-#define SHOW_ALT	true
+bool SHOW_CTRL =	true;
+bool SHOW_SHIFT =	true;
+bool SHOW_SUPER =	true;
+bool SHOW_ALT =		true;
+bool SHOW_BORDERS = true;
 
 using namespace std;
 
@@ -31,9 +33,22 @@ void imageToTexture(string image_path, SDL_Texture* &tex_temp, SDL_Renderer* ren
 	SDL_FreeSurface(sur_temp);
 }
 
+void print_help() 
+{
+	system("man -c ./key-sun.1");
+	exit(0);
+}
 
-int main() {
+int main(int argc, char* argv[]) {
+
+	// variables for handing arguments
+	int i;
+	string arg_next;
+	string arg_next2;
+
+	int X=0,Y=0; // position variables
 	short int nButtons = 1; // this shows the number of buttons including the general button
+	#include "arg.h"
 	// the x,y positons and width and hieght on the window
 	SDL_Rect rect_ctrl;
 	SDL_Rect rect_shift;
@@ -61,12 +76,15 @@ int main() {
 	}
 	SDL_Rect rect_letters =		{(nButtons-1)*BUTTON_WIDTH, 0, BUTTON_WIDTH, BUTTON_HIEGHT};
 
+	// again to update the position after the change in nButtons
+	// the first include to control the boolean variables
+	#include "arg.h"
+
 	SDL_Window* window = NULL;
-	bool show_borders = true;
-	if (!show_borders)
-		window = SDL_CreateWindow( "keysun", 0, 0, BUTTON_WIDTH*nButtons, BUTTON_HIEGHT, SDL_WINDOW_SHOWN | SDL_WINDOW_BORDERLESS | SDL_WINDOW_UTILITY | SDL_WINDOW_ALWAYS_ON_TOP);
+	if (!SHOW_BORDERS)
+		window = SDL_CreateWindow( "keysun", X, Y, BUTTON_WIDTH*nButtons, BUTTON_HIEGHT, SDL_WINDOW_SHOWN | SDL_WINDOW_BORDERLESS | SDL_WINDOW_UTILITY | SDL_WINDOW_ALWAYS_ON_TOP);
 	else
-		window = SDL_CreateWindow( "keysun", 0, 0, BUTTON_WIDTH*nButtons, BUTTON_HIEGHT, SDL_WINDOW_SHOWN | SDL_WINDOW_UTILITY | SDL_WINDOW_ALWAYS_ON_TOP);
+		window = SDL_CreateWindow( "keysun", X, Y, BUTTON_WIDTH*nButtons, BUTTON_HIEGHT, SDL_WINDOW_SHOWN | SDL_WINDOW_UTILITY | SDL_WINDOW_ALWAYS_ON_TOP);
 
 	SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, 0);
 	// initializing outsize the if statments to be able to use them
