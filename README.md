@@ -41,7 +41,7 @@ xbps-install SDL2 SDL2_image
 installing dependancies on debian-based linux:
 
 ```
-apt install SDL2 SDL2_image
+apt install libsdl2-dev libsdl2-image-dev
 ```
 
 then to run it:
