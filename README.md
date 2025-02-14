@@ -35,13 +35,13 @@ then install the dependancies
 installing dependancies on void linux:
 
 ```
-xbps-install SDL2 SDL2_image
+xbps-install SDL2-devel SDL2_image-devel make gcc
 ```
 
 installing dependancies on debian-based linux:
 
 ```
-apt install libsdl2-dev libsdl2-image-dev
+apt install libsdl2-dev libsdl2-image-dev make gcc
 ```
 
 then to run it:
@@ -68,7 +68,7 @@ xbps-install SDL2-devel SDL2_image-devel make gcc
 installing dependancies on debian-based linux:
 
 ```
-apt install SDL2-dev SDL2_image-dev make gcc
+apt install libsdl2-dev libsdl2-image-dev make gcc
 ```
 
 after installing the dependancies, download the repository and `cd` into it and run this command to build from source:
