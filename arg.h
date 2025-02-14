@@ -76,9 +76,8 @@ while (i < argc)
 		}
 
 		strcpy(KEYBOARD_FILE, arg_next.c_str());
-		bool file_exit = std::filesystem::exists(KEYBOARD_FILE);
 
-		if (!file_exit)
+		if (!std::filesystem::exists(KEYBOARD_FILE))
 		{
 			cout << "file " << KEYBOARD_FILE << " does not exist" << endl;
 			return 1;
