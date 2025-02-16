@@ -1,4 +1,4 @@
-// g++ key_sun.cpp -o key_sun.cpp.o -lSDL2 -lSDL2_image && ./key_sun.cpp.o
+// g++ key-sun.cpp -o key-sun.cpp.o -lSDL2 -lSDL2_image && ./key-sun.cpp.o
 #include <linux/input.h>
 #include <fcntl.h>
 #include <unistd.h>
@@ -51,7 +51,7 @@ void print_help()
 int main(int argc, char* argv[]) {
 
 	current_path = argv[0];
-	// remove last seven chars(key_sun) by subtracting totall length - 7
+	// remove last seven chars(key-sun) by subtracting totall length - 7
 	current_path.erase(current_path.length() - 7);
 
 	// variables for handing arguments

@@ -1,4 +1,4 @@
-# key_sun
+# key-sun
 
 ![preview when clicked](./screenshots/example.png "image")
 
@@ -10,7 +10,7 @@ this is a software to show the keyboard clicks on screen. it is useful when maki
 [comment]: # (<img src="./screenshots/mouse.png" height="100" align="left"/>)
 
 ## how to install
-first download the tar file from the [releases](https://github.com/muezabdalla/key_sun/releases)
+first download the tar file from the [releases](https://github.com/muezabdalla/key-sun/releases)
 note: download the key-sun.tar not the source code(the source code is for building from source)
 
 then extract the tar file with this command:
@@ -47,7 +47,7 @@ sudo apt install libsdl2 libsdl2-image
 then to run it:
 
 ```
-./key_sun
+./key-sun
 ```
 
 ## building from source
@@ -86,7 +86,7 @@ make clean
 to run it:
 
 ```
-./key_sun
+./key-sun
 ```
 
 ## common issues:

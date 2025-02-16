@@ -12,4 +12,4 @@ key-sun: $(SRC)
 clean :
 	rm $(TARGET)
 
-install: mouse-sun
+install: key-sun
