@@ -3,13 +3,13 @@ CXX = g++
 
 LIBS = -lSDL2 -lSDL2_image
 
-SRC = key_sun.cpp
-TARGET = key_sun
+SRC = key-sun.cpp
+TARGET = key-sun
 
-mouse_sun: $(SRC)
+key-sun: $(SRC)
 	$(CXX) $(SRC) -o $(TARGET) $(LIBS)
 
 clean :
 	rm $(TARGET)
 
-install: mouse_sun
+install: mouse-sun
