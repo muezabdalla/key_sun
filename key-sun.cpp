@@ -44,7 +44,8 @@ void imageToTexture(string image_path, SDL_Texture* &tex_temp, SDL_Renderer* ren
 
 void print_help() 
 {
-	system("man -c ./key-sun.1");
+	// use the current_path to make run even from a differant directory
+	system(("man -c "+current_path+"key-sun.1").c_str());
 	exit(0);
 }
 

@@ -1,3 +1,6 @@
+> [!CAUTION]
+> this app is no longer maintained. use [IMS](https://github.com/muezabdalla/IMS) (input monitoring system)
+> it shows both the keyboard and mouse.
 # key-sun
 
 ![preview when clicked](./screenshots/example.png "image")
